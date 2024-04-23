@@ -24,3 +24,8 @@ puts '#{name}さんの体重は#{weight}kgです'
 names = ["t1", "t2", "t3"]
 puts names
 puts names[0]
+
+# to_s （整数型→文字列型へ変換）
+puts "Samの年齢は" + 27.to_s + "です"
+# to_i （文字列型→整数型へ変換）
+puts 100 + "200".to_i
