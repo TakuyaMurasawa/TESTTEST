@@ -35,13 +35,17 @@ puts tall["太郎"]
 tall2 = {:太郎=>185, :二郎=>170, :花子=>150}
 puts tall2[:太郎]
 
-puts "キーボードから何か入力してみましょう"
-input_key = gets
-puts "入力された内容は#{input_key}"
+# puts "キーボードから何か入力してみましょう"
+# input_key = gets
+# puts "入力された内容は#{input_key}"
 
 dice = 0  # 変数diceに0を代入し、初期値を設定する
 
 while dice != 6 do  # サイコロの目が6ではない間、diceの初期値は0なので条件を満たす。以降はdiceに代入される数によって結果が異なる
   dice = rand(1..6)  # 1～6の数字がランダムに出力される
   puts dice
+end
+
+for i in 1..6 do  # "1..6"は、1～6までの範囲を表す
+  puts i
 end
