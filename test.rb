@@ -122,6 +122,7 @@ end
 
 puts "数字を入力してください。"
 
+# 入力した文字をint型へ
 input = gets.to_i
 
 puts "結果は..."
