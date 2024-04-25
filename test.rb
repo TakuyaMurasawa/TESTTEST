@@ -49,3 +49,60 @@ end
 for i in 1..6 do  # "1..6"は、1～6までの範囲を表す
   puts i
 end
+
+amounts = {"リンゴ"=>2, "イチゴ"=>5, "オレンジ"=>3}
+amounts.each do |fruit, amount|  #ハッシュの内容を順にキーをfruit、値をamountに代入して繰り返す
+  puts "#{fruit}は#{amount}個です。"
+end
+
+i = 1
+while i <= 10 do
+  if i == 5
+    puts "処理を終了します"
+    break  # iが5になると繰り返しから抜ける
+  end
+  puts i
+  i += 1 # iの数値に1を加えたい時は、i = i +1と書く代わりに、i += 1と書くことができます。
+end
+
+def greeting
+  'Hello'
+end
+
+puts greeting
+
+def greeting(name)
+  "Hello, #{name}!"  # この行のnameは、引数で渡すname
+end
+
+puts greeting("John")  # 'John'を引数として渡す
+
+# 「戻り値（返り値）」は、メソッドが呼ばれたときに返ってくる値のことです。
+# def ～ end 処理内の最終結果が戻り値になります。
+def greeting1(name)
+  "Hello, #{name}!"
+  "Good morning, #{name}!"
+end
+
+def greeting2(name)
+  return "Hello, #{name}!"
+  "Good morning, #{name}!"
+end
+
+puts greeting1('John')
+# Goodmorning,John!=>最終結果が返り値
+puts greeting2('John')
+# Hello,john!=>return部分が返り値
+
+# どのような場面でreturnを使用するか
+def calc(num)
+  return "計算できません" if num.zero?
+
+  # 複雑な計算処理
+end
+# numは引数で受け取る値なので、引数に渡る数値が0の場合はreturnによって"計算できません"が返ります。
+# そして、それ以降の複雑な計算処理は行われません。ここが重要なところです。
+
+# returnを実行すると、そこでメソッドを終了するため、今回のような数値が0である場合には、早々にメソッドを終了したい場合などに有効です。
+# このようにreturnなどの制御文を工夫して使用することで、無駄なプログラムの処理をあえて行わないように実装することが可能になります。
+# 一つ一つの処理をコンパクトに収めるために、あえてreturnを細かく記述することもあります。
