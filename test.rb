@@ -127,3 +127,5 @@ input = gets.to_i
 
 puts "結果は..."
 puts fizzbuzz(input)
+
+puts "testing..."
