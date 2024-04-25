@@ -106,3 +106,23 @@ end
 # returnを実行すると、そこでメソッドを終了するため、今回のような数値が0である場合には、早々にメソッドを終了したい場合などに有効です。
 # このようにreturnなどの制御文を工夫して使用することで、無駄なプログラムの処理をあえて行わないように実装することが可能になります。
 # 一つ一つの処理をコンパクトに収めるために、あえてreturnを細かく記述することもあります。
+
+
+def fizzbuzz(number)
+  if number % 15 == 0
+    "FizzBuzz"
+  elsif number % 3 == 0
+    "Fizz"
+  elsif number % 5 == 0
+    "Buzz"
+  else
+    number.to_s
+  end
+end
+
+puts "数字を入力してください。"
+
+input = gets.to_i
+
+puts "結果は..."
+puts fizzbuzz(input)
