@@ -129,3 +129,5 @@ puts "結果は..."
 puts fizzbuzz(input)
 
 puts "testing..."
+
+puts "保険"
